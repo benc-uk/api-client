@@ -3,7 +3,7 @@
 // Example usage of the base API client, that calls https://fruityvice.com/
 // ----------------------------------------------------------------------------
 
-import { APIClientBase } from "./lib/api-base.mjs";
+import { APIClientBase } from "./lib/api-client-base.mjs";
 
 export class FruitAPI extends APIClientBase {
   constructor() {
