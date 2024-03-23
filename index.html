@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module">
+      import * as msal from 'https://cdn.jsdelivr.net/npm/@azure/msal-browser@3.11.0/+esm'
+
+      const msalConfig = {
+        auth: {
+          clientId: 'your-client-id',
+          authority: 'https://login.microsoftonline.com/your-tenant-id',
+        },
+      }
+      const msalInstance = new msal.PublicClientApplication(msalConfig)
+      await msalInstance.initialize()
+
+      const loginRequest = {
+        scopes: ['user.read'],
+      }
+
+      const loginResponse = await msalInstance.loginPopup(loginRequest)
+    </script>
+  </body>
+</html>
