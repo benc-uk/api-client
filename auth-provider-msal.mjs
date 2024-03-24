@@ -7,7 +7,7 @@
 // <script src="https://cdn.jsdelivr.net/npm/@azure/msal-browser@3.11/lib/msal-browser.min.js"></script>
 // ----------------------------------------------------------------------------------------------------------
 
-import * as msal from 'https://cdn.jsdelivr.net/npm/@azure/msal-browser@3.11.0/+esm'
+import * as msal from 'https://cdn.jsdelivr.net/npm/@azure/msal-browser@3/+esm'
 
 export class AuthProviderMSAL {
   msalApp = null
